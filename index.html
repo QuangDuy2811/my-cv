@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Layout Flexbox chuẩn có responsive</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0; padding: 20px; height: 100vh; font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    gap: 10px;
+    height: 600px;
+  }
+  nav {
+    border: 2px solid red;
+    width: 150px;
+    height: 100%;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+  }
+  header {
+    border: 2px solid red;
+    height: 60px;
+  }
+  section.content {
+    border: 2px solid red;
+    flex: 1;
+  }
+  footer {
+    border: 2px solid red;
+    height: 50px;
+  }
 
+  /* Responsive cho màn hình nhỏ */
+  @media (max-width: 687px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+    nav, header, section.content, footer {
+      width: 100%;
+      height: auto;
+    }
+    nav {
+      height: 60px; /* chiều cao giống header để cân đối */
+    }
+    footer {
+      height: 50px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <nav>Menu</nav>
+    <div class="right">
+      <header>Header</header>
+      <section class="content">Content chính</section>
+      <footer>Footer</footer>
+    </div>
+  </div>
+</body>
+</html>
