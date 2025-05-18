@@ -28,9 +28,6 @@
   section.content {
     flex: 1;
   }
-  footer {
-    height: 50px;
-  }
 
   /* Responsive cho màn hình nhỏ */
   @media (max-width: 687px) {
@@ -200,4 +197,303 @@
 }
 .download-btn:hover {
   background: #e6b800;
+}
+
+/*header*/
+/* Tổng thể header */
+/* Tổng thể header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white ;/* Màu nền nhẹ, tùy ý chỉnh */
+  position: relative;
+  min-height: 65px;
+}
+
+/* Navigation menu */
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Khoảng cách giữa các mục */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.tab-action{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 65px; /* kích thước tùy chỉnh */
+  height: 65px;
+  background-color: #ffcc00; /* màu nền khối */
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  text-decoration: none; /* bỏ gạch chân nếu là thẻ a */
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer; 
+}
+.tab-action:hover{
+  background-color: #ffb700;
+}
+.tab-action i {
+  display: flex; /* biến <i> thành flex container */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+}
+
+.tab a:hover{
+  color: #ffcc00;
+}
+
+.nav-icon {
+  font-size: 20px;
+}
+
+/* Actions container */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Icon menu hamburger */
+.menu-icon i {
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Icons mạng xã hội */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons i {
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s;
+  padding-left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: blue;
+  transform: translateY(-2px); /* Nhẹ nhàng nâng nút để tạo hiệu ứng nổi */
+}
+
+/* Thẻ a "Hire Me" */
+.hire-me {
+  background-color: #ffcc00; /* Màu vàng */
+  padding: 10px 20px; /* Padding phù hợp */
+  border-radius: 50px; /* Bo góc tròn mượt */
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-flex; /* Dùng flex để căn icon và text */
+  align-items: center; /* Căn chỉnh theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang nếu cần */
+  width: auto; /* Để nút tự điều chỉnh theo nội dung */
+  min-width: 120px; /* Đặt tối thiểu cho nút */
+  cursor: pointer;
+}
+
+/* Style cho icon */
+.hire-me i {
+  background-color: white;
+  color: #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex; /* Dùng flexible để căn icon */
+  align-items: center; /* Căn trung tâm dọc */
+  justify-content: center; /* Căn trung tâm ngang */
+  margin-left: 8px; /* Khoảng cách từ text */
+  font-size: 12px; /* Kích thước icon rõ ràng hơn */
+  transition: all 0.3s; /* Hiệu ứng chuyển đổi mượt */
+}
+
+/* Hiệu ứng hover cho nút */
+.hire-me:hover {
+  background-color: #ffb700;
+}
+
+/*content*/
+/* Bao phủ toàn bộ Sections */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: white;
+}
+.content-div{
+  padding: 40px 40px;
+}
+/* Phần about me - chiều dài dài, chiếm toàn bộ chiều rộng */
+.content-div:first-child {
+  margin-bottom: 50px;
+}
+
+/* Tiêu đề */
+.content-div h2 {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 4px solid sandybrown;
+  line-height: 0.7;
+}
+
+/* Nội dung text trong about me */
+.content-div p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+.content-div:nth-child(2){
+  background-color:#fafafa;
+}
+
+/* Container cha của các dịch vụ */
+.service {
+  display: flex; /* dùng flex để xếp thẻ con theo hàng ngang */
+  justify-content: space-between; /* đều khoảng cách giữa các mục */
+  flex-wrap: nowrap; /* giữ 4 cột trên một hàng */
+  gap: 20px; /* khoảng cách giữa các service-item */
+  margin-top: 20px; /* khoảng cách từ h2 xuống */
+ 
+}
+
+/* Các item dịch vụ */
+.service-item {
+  background-color: #fff;
+  width: calc(25% - 15px); /* chia đều 4 cột, trừ khoảng gap */
+  min-height: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Icon của mỗi dịch vụ */
+.service-item .icon {
+  font-size: 40px;
+  color: #ffaa00;
+  margin-bottom: 15px;
+}
+
+/* Tiêu đề */
+.service-item .title {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Mô tả */
+.service-item p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+/* Mỗi cột kỹ năng */
+.skill-category {
+  width: 45%;
+}
+
+/* Tiêu đề kỹ năng */
+.skill-category h2 {
+  display: inline-block;
+  border-bottom: 4px solid sandybrown;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px; /* lớn nhỏ tùy ý, phù hợp ảnh */
+  line-height: 0.7;
+  margin: 0; /* Bỏ margin để sát */
+  padding: 0; /* Bỏ padding để sát */
+}
+.category {
+  max-width: 100%;
+  margin: 50px auto; /* Căn giữa, đệm trên xuống dưới */
+  display: flex;
+  flex-direction: row; /* Chia thành 2 cột */
+  gap: 40px; /* Khoảng cách giữa 2 cột */
+   justify-content: space-around; /* Đều 2 cột */
+}
+
+.skill-category {
+  flex: 1;
+  padding: 10px;
+}
+/* Thanh tiến trình */
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ffca00; /* Màu vàng như hình */
+  width: 0; /* Đặt bằng inline style hoặc CSS tùy chỉnh */
+  border-radius: 6px 0 0 6px;
+  transition: width 1s;
+}
+
+/* Style cho footer */
+.footer {
+  background-color: #222; /* màu nền đen hoặc rất tối */
+  margin: 30px 0px;      /* padding trên dưới */
+  color: #fff;            /* chữ màu trắng */
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  height: 130px;
+}
+
+/* Tiêu đề trong footer */
+.footer h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left; 
+}
+
+/* Paragraph trong footer */
+.footer p {
+  font-size: 14px;
+  opacity: 0.8; /* giảm độ đậm của văn bản, tùy ý */
+  text-align: center; 
 }
