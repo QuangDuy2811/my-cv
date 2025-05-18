@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0; padding: 20px; height: 100vh; font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* màu nền xám nhạt */
+  }
+  .container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; 
+    min-height: 100vh;
+    margin: 25px 80px 25px 80px;
+  }
+  nav {
+    width: 20%;
+    margin-right: 20px;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+  }
+  header {
+    height: 60px;
+  }
+  section.content {
+    flex: 1;
+  }
+  footer {
+    height: 50px;
+  }
+
+  /* Responsive cho màn hình nhỏ */
+  @media (max-width: 687px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  nav, header, section.content, footer {
+    width: 100%;
+    height: auto;
+  }
+  nav {
+    height: auto;
+  }
+}
+
+.profile-nav {
+  width: 100%;
+  max-width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgb(255 204 0 / 0.2);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  box-sizing: border-box;
+  height: auto; /* Nav tự co theo nội dung */
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 687px) {
+  .profile-nav {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+/* Không cần phần này, hoặc giữ để style riêng cho ảnh nếu cần */
+.profile-figure {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  margin-bottom: 60px;
+}
+
+.profile-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Thêm clip-path để tạo hiệu ứng chéo */
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+/* Sửa lại để nội dung info nằm dưới hình ảnh, không bị đè */
+.profile-info {
+  /* Đặt thành relative để dễ điều chỉnh hoặc bỏ đi nếu không cần cố định vị trí */
+  position: relative; 
+  padding: 20px;
+  padding-left: 20px;
+  border-radius: 6px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-info span:first-child {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1a1a1a; /* đen hơi xám */
+}
+
+.profile-info span:last-child {
+  font-weight: 400;
+  font-size: 12px;
+  color: #666666; /* xám nhạt */
+  
+}
+
+/* Đảm bảo nội dung danh sách không bị đè */
+.profile-details {
+  list-style: none;
+  margin: 0;
+  padding-left: 60px;
+  position: relative;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Đường dọc */
+.profile-details::before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  left: 33px; /* khớp với dot và icon */
+  width: 2px;
+  height: 150%;
+  background-color: #E8E8E8;
+  z-index: 0;
+}
+
+/* Icon kính nằm trong hình tròn */
+.profile-details .icon-glasses {
+  position: absolute;
+  top: -80px; /* đẩy lên cao hơn */
+  left: 15px;
+  width: 42px;
+  height: 42px;
+  background-color: #ffcd00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: black;
+  z-index: 2;
+}
+
+/* Mỗi dòng thông tin */
+.profile-details li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  color: #a9a9a9;
+}
+.profile-details li span{
+  color: black;
+  margin-right: 5px;
+}
+
+/* Dot vàng */
+.profile-details .dot {
+  width: 8px;
+  height: 8px;
+  border: 2px solid orange;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  left: -30px; /* căn trái khớp với icon */
+}
+
+/* Khoảng cách sau dấu ":" */
+.profile-details strong {
+  margin-right: 5px;
+}
+
+/* Nút download giữ nguyên */
+.download-btn {
+  background: #ffcd00;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  padding: 10px 0;
+  width: 50%;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 3px 8px rgb(255, 204, 0, 0.6);
+  margin: 0 auto;
+}
+.download-btn:hover {
+  background: #e6b800;
+}

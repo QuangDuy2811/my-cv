@@ -3,65 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Layout Flexbox chuẩn có responsive</title>
-<style>
-  * {
-    box-sizing: border-box;
-  }
-  body, html {
-    margin: 0; padding: 20px; height: 100vh; font-family: Arial, sans-serif;
-  }
-  .container {
-    display: flex;
-    gap: 10px;
-    height: 600px;
-  }
-  nav {
-    border: 2px solid red;
-    width: 150px;
-    height: 100%;
-  }
-  .right {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 10px;
-  }
-  header {
-    border: 2px solid red;
-    height: 60px;
-  }
-  section.content {
-    border: 2px solid red;
-    flex: 1;
-  }
-  footer {
-    border: 2px solid red;
-    height: 50px;
-  }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  /* Responsive cho màn hình nhỏ */
-  @media (max-width: 687px) {
-    .container {
-      flex-direction: column;
-      height: auto;
-    }
-    nav, header, section.content, footer {
-      width: 100%;
-      height: auto;
-    }
-    nav {
-      height: 60px; /* chiều cao giống header để cân đối */
-    }
-    footer {
-      height: 50px;
-    }
-  }
-</style>
+<title>TechLead training HTML CSS</title>
+
 </head>
 <body>
   <div class="container">
-    <nav>Menu</nav>
+    <nav class="profile-nav">
+      <div class="profile-info">
+        <span>HENRY ROONEY</span>
+        <span>Creative Designer</span>
+      </div>
+      <figure class="profile-figure">
+          <img src="https://techlead-training.web.app/profile.ba9daec7.jpg" alt="Profile Photo" />
+      </figure>
+      
+      <ul class="profile-details">
+        <li class="icon-glasses"><i class="fas fa-glasses"></i></li>
+        <li><span class="dot"></span><span>Name: </span> Chris Johnson</li>
+        <li><span class="dot"></span><span>Birthday: </span> 06 December 1987</li>
+        <li><span class="dot"></span><span>Job: </span> Freelancer</li>
+        <li><span class="dot"></span><span>Email: </span> henry@domain.com</li>
+        <li><span class="dot"></span><span>Skype: </span> henryrooney85</li>
+      </ul>
+
+      <div>
+        <button class="download-btn">Download Cv <i class="fa fa-download" aria-hidden="true"></i></button>
+      </div>
+    </nav>
+
     <div class="right">
       <header>Header</header>
       <section class="content">Content chính</section>
