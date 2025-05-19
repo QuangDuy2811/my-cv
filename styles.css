@@ -847,6 +847,114 @@
   font-weight: 600;
 }
 
+/*blog*/
+#blog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.blog-title h2 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 4px solid sandybrown;
+  display: inline-block;
+  padding: 0;
+  margin: 40px 0px;
+  line-height: 0.6;
+}
+
+/* Portfolio content: 3 cột */
+.blog-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+}
+
+/* Portfolio item */
+.blog-items {
+  overflow: hidden;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+}
+.blog-items:hover{
+  background-color: white;
+}
+.blog-items a{
+  text-decoration: none;
+}
+
+.blog-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.blog-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* Nội dung dưới ảnh */
+.blog-info {
+  padding: 15px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-info span:nth-child(2) {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #222;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+
+.blog-info span:nth-child(1),.blog-info span:nth-child(3) {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.3;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.blog-info span:nth-child(4){
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #222;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.blog-click{
+  margin: 60px auto;
+  padding: 10px 20px;
+  text-align: center;
+  justify-items: center;
+  border-radius: 20px;
+  background-color: #e6b800;
+  max-width: 140px;
+  height: 40px;
+  font-size: 14px;
+}
+.blog-click a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+}
+
 /* Style cho footer */
 .footer {
   background-color: #222; /* màu nền đen hoặc rất tối */
