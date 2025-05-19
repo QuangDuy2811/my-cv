@@ -46,7 +46,7 @@
 
 .profile-nav {
   width: 100%;
-  max-width: 280px;
+  max-width: 260px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgb(255 204 0 / 0.2);
@@ -349,16 +349,15 @@
   box-sizing: border-box;
   background-color: white;
 }
-.content-div{
-  padding: 40px 40px;
+#home .content-div {
+  padding: 40px 40px 10px 40px;
 }
-/* Phần about me - chiều dài dài, chiếm toàn bộ chiều rộng */
-.content-div:first-child {
+
+#home .content-div:first-child {
   margin-bottom: 50px;
 }
 
-/* Tiêu đề */
-.content-div h2 {
+#home .content-div h2 {
   display: inline-block;
   font-family: Arial, sans-serif;
   font-weight: 700;
@@ -369,95 +368,95 @@
   line-height: 0.7;
 }
 
-/* Nội dung text trong about me */
-.content-div p {
+#home .content-div p {
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
   color: #555;
-}
-.content-div:nth-child(2){
-  background-color:#fafafa;
+  padding-top: 15px;
 }
 
-/* Container cha của các dịch vụ */
-.service {
-  display: flex; /* dùng flex để xếp thẻ con theo hàng ngang */
-  justify-content: space-between; /* đều khoảng cách giữa các mục */
-  flex-wrap: nowrap; /* giữ 4 cột trên một hàng */
-  gap: 20px; /* khoảng cách giữa các service-item */
-  margin-top: 20px; /* khoảng cách từ h2 xuống */
- 
+#home .content-div:nth-child(2) {
+  background-color: #fafafa;
 }
 
-/* Các item dịch vụ */
-.service-item {
+#home .service {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#home .service-item {
   background-color: #fff;
-  width: calc(25% - 15px); /* chia đều 4 cột, trừ khoảng gap */
-  min-height: 250px;
+  width: calc(25% - 15px);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   box-sizing: border-box;
 }
 
-/* Icon của mỗi dịch vụ */
-.service-item .icon {
+#home .service-item .icon {
   font-size: 40px;
   color: #ffaa00;
-  margin-bottom: 15px;
 }
 
-/* Tiêu đề */
-.service-item .title {
-  font-family: Arial, sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 10px;
+#home .icon img {
+  width: 50px;
+  height: 50px;
 }
 
-/* Mô tả */
-.service-item p {
+#home .service-item .title {
   font-family: Arial, sans-serif;
+  font-weight: 400;
   font-size: 14px;
+  margin-top: 15px;
+}
+
+#home .service-item p {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
   color: #555;
 }
-/* Mỗi cột kỹ năng */
-.skill-category {
+
+#home .skill-category {
   width: 45%;
 }
 
-/* Tiêu đề kỹ năng */
-.skill-category h2 {
+#home .skill-category h2 {
   display: inline-block;
   border-bottom: 4px solid sandybrown;
   font-family: Arial, sans-serif;
   font-weight: bold;
-  font-size: 16px; /* lớn nhỏ tùy ý, phù hợp ảnh */
+  font-size: 16px;
   line-height: 0.7;
-  margin: 0; /* Bỏ margin để sát */
-  padding: 0; /* Bỏ padding để sát */
-}
-.category {
-  max-width: 100%;
-  margin: 50px auto; /* Căn giữa, đệm trên xuống dưới */
-  display: flex;
-  flex-direction: row; /* Chia thành 2 cột */
-  gap: 40px; /* Khoảng cách giữa 2 cột */
-   justify-content: space-around; /* Đều 2 cột */
+  margin: 0;
+  padding: 0;
 }
 
-.skill-category {
+#home #content-h2 {
+  margin-bottom: 20px;
+}
+
+#home .category {
+  max-width: 100%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: space-around;
+}
+
+#home .skill-category {
   flex: 1;
   padding: 10px;
 }
-/* Thanh tiến trình */
-.progress-bar {
+
+#home .progress-bar {
   width: 100%;
   height: 5px;
   background-color: #ddd;
@@ -466,12 +465,234 @@
   overflow: hidden;
 }
 
-.progress {
+#home .progress {
   height: 100%;
-  background-color: #ffca00; /* Màu vàng như hình */
-  width: 0; /* Đặt bằng inline style hoặc CSS tùy chỉnh */
+  background-color: #ffca00;
+  width: 0;
   border-radius: 6px 0 0 6px;
   transition: width 1s;
+}
+
+/*content resume*/
+#resume .content-row {
+  padding: 40px;
+}
+
+#resume .content-row h2 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 4px solid sandybrown;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 0.6;
+}
+#resume #content-h2 {
+  margin-bottom: 20px;
+}
+
+
+#resume .row-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Cột làm việc và học vấn */
+#resume .working,
+#resume .education {
+  flex: 1;
+  min-width: 300px;
+}
+
+#resume .details {
+  list-style: none;
+  margin: 0 0 30px 0;
+  padding-left: 0;
+  color: #444;
+  font-size: 14px;
+}
+
+#resume .details li {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px; /* chừa chỗ cho dot */
+}
+
+/* .dot vị trí cố định bên trái căn dọc với h3 */
+#resume .details li .dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  background-color: gold;
+  border-radius: 50%;
+}
+
+/* h3 và các phần tử con xếp dọc bình thường */
+#resume .details li h3 {
+  margin: 0 0 6px 0;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  /* Để dot nằm thẳng hàng, có thể thêm padding-left hoặc để nguyên vì dot đã ở left */
+}
+
+#resume .details li span {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+#resume .details li p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* li.icon chứa icon và h3: xếp ngang */
+#resume .details li.icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: sandybrown;
+  padding-left: 0; /* icon có chừa chỗ riêng */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#resume .details li.icon i {
+  font-size: 24px;
+  color: black;
+  flex-shrink: 0;
+}
+
+
+#resume .content-row-2 {
+  max-width: 1200px;
+  padding: 40px 40px;
+  background-color: #fafafa;
+}
+
+#resume .content-row-2 h2 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 4px solid sandybrown;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 0.6;
+}
+
+#resume .row-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* khoảng cách giữa các cột */
+}
+
+#resume .block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(54, 53, 51, 0.7);
+}
+
+#resume .trademark img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 100px; /* giảm kích thước ảnh */
+  cursor: pointer;
+}
+
+#resume .content-row-3{
+  padding: 40px 40px;
+}
+#resume .content-row-3 h2 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 4px solid sandybrown;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 0.6;
+}
+#resume .row-3 {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#resume .comment {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 30%; /* 3 cột */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#resume .comment-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#resume .comment-top img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid sandybrown;
+}
+
+#resume .comment-info .name {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+}
+
+#resume .comment-info .role {
+  font-size: 14px;
+  color: #888;
+  display: block;
+}
+
+#resume hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+#resume .comment-text p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive: trên điện thoại 1 cột */
+@media (max-width: 768px) {
+  #resume .comment {
+    width: 100%;
+  }
 }
 
 /* Style cho footer */
