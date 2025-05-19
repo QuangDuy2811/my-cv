@@ -694,6 +694,158 @@
     width: 100%;
   }
 }
+#portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.portfolio-title {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 4px solid sandybrown;
+  display: inline-block;
+  padding: 0;
+  margin: 40px 0px;
+  line-height: 0.6;
+}
+
+/* Filters: 5 div trên 1 hàng */
+.portfolio-filters {
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+
+.filter-item a {
+  color: #888 ;
+  text-decoration: none;
+  padding: 10px 0px;
+  font-size: 14px;
+  font-weight: 200;
+  transition: background-color 0.3s ease;
+}
+
+.filter-item a.active {
+  color: #f4b400; /* màu vàng */
+}
+
+
+/* Portfolio content: 3 cột */
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Portfolio item */
+.portfolio-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+.portfolio-item a{
+  text-decoration: none;
+}
+
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.portfolio-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Overlay icon */
+.portfolio-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 204, 0, 0.9); /* màu vàng semi-transparent */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-overlay i {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Hover effect */
+.portfolio-thumb:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+
+/* Thumb ảnh */
+.portfolio-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Nội dung dưới ảnh */
+.portfolio-info {
+  padding: 15px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-title-text {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #222;
+  text-decoration: none;
+}
+
+.portfolio-category {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.3;
+  text-decoration: none;
+}
+.portfolio-click{
+  margin: 60px auto;
+  padding: 10px 20px;
+  text-align: center;
+  justify-items: center;
+  border-radius: 20px;
+  background-color: #e6b800;
+  max-width: 140px;
+  height: 40px;
+  font-size: 14px;
+}
+.portfolio-click a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+}
 
 /* Style cho footer */
 .footer {
